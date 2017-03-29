@@ -1,0 +1,4 @@
+[root]
+name = "fibo"
+version = "0.1.0"
+

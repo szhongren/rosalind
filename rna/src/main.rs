@@ -9,9 +9,15 @@ fn main() {
     dataset_path.push("datasets");
     dataset_path.push("rosalind_rna.txt");
 
-    let mut data = String::new();
-    let _ = File::open(dataset_path)
-        .unwrap()
-        .read_to_string(&mut data);
+    let data = read_file(dataset_path);
     print!("{}", data.replace("T", "U"));
 }
+
+fn read_file(path: PathBuf) -> String {
+    let mut data = String::new();
+    let _ = File::open(path)
+        .unwrap()
+        .read_to_string(&mut data);
+    data
+}
+

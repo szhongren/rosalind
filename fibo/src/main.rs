@@ -22,8 +22,7 @@ fn read_file(path: PathBuf) -> String {
 }
 
 fn fibo_i(data: String) -> u64 {
-    data
-        .trim()
+    data.trim()
         .parse::<u64>()
         .unwrap_or(0)
 }
@@ -35,5 +34,5 @@ fn fibo(i: u64) -> u64 {
         let last_2 = dp[dp.len() - 2];
         dp.push(last + last_2);
     }
-    dp[i as usize]
+    *dp.last().unwrap()
 }

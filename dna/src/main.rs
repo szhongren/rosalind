@@ -36,6 +36,6 @@ fn dna(genome: String) -> HashMap<char, i64> {
 
 fn print_ans(counts: HashMap<char, i64>) {
     for ch in "ACGT".chars() {
-        print!("{} ", counts.get(&ch).unwrap_or(&-1));
+        print!("{} ", counts.get(&ch).unwrap_or(&0));
     }
 }

@@ -24,8 +24,7 @@ fn read_file(path: PathBuf) -> (u64, u64) {
         .map(|v|
             v.to_string()
                 .parse::<u64>()
-                .unwrap_or_default()
-            )
+                .unwrap_or_default())
         .collect();
     (ans[0].clone(), ans[1].clone())
 }

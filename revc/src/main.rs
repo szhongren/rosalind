@@ -22,17 +22,16 @@ fn read_file(path: PathBuf) -> String {
 }
 
 fn revc(genome: String) -> String {
-    genome
-    .trim()
-    .chars()
-    .map(|n|
-        match n {
-            'A' => 'T',
-            'C' => 'G',
-            'G' => 'C',
-            'T' => 'A',
-            _ => '?'
-        })
-    .rev()
-    .collect::<String>()
+    genome.trim()
+        .chars()
+        .map(|n|
+            match n {
+                'A' => 'T',
+                'C' => 'G',
+                'G' => 'C',
+                'T' => 'A',
+                _ => '?'
+            })
+        .rev()
+        .collect::<String>()
 }

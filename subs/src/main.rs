@@ -26,8 +26,7 @@ fn read_file(path: PathBuf) -> (String, String) {
         .lines()
         .take(2)
         .map(|v|
-            v.to_string()
-            )
+            v.to_string())
         .collect();
     (ans[0].clone(), ans[1].clone())
 }
